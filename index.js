@@ -4,6 +4,11 @@ const app = express();
 require('dotenv').config(); // loading data from env file
 const PORT = process.env.PORT || 3000;
 
+
+// cookie-parser
+const cookieParser = require('cookie-parser');
+app.use(cookieParser()); 
+
 app.use(express.json());
 
 require("./config/database").connect();
